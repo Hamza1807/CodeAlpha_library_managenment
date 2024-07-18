@@ -1,0 +1,220 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    border-radius: 10px 10px 0 0;
+}
+
+    header h1 {
+        margin: 0;
+        color: #333;
+        font-size: 24px;
+    }
+
+#search {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #f8f9fa;
+}
+
+    #search:focus {
+        border-color: #4caf50;
+    }
+
+#categories {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.category {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+    .category:hover {
+        background-color: #ddd;
+    }
+
+    .category.active {
+        background-color: #4caf50;
+        color: white;
+        border-color: #4caf50;
+    }
+
+#book-list {
+    margin-top: 20px;
+}
+
+.book {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    transition: background-color 0.3s;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+    .book:last-child {
+        border-bottom: none;
+    }
+
+    .book:hover {
+        background-color: #f9f9f9;
+    }
+
+    .book h3 {
+        margin: 0 0 5px;
+        color: #333;
+        font-size: 18px;
+    }
+
+    .book p {
+        margin: 5px 0;
+        color: #666;
+    }
+
+.borrow-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .borrow-button:hover {
+        background-color: #45a049;
+    }
+
+    .borrow-button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+    }
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #e0e0e0;
+    color: #666;
+    background-color: #f8f9fa;
+    border-radius: 0 0 10px 10px;
+}
+
+#add-book-form {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+    #add-book-form h2 {
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 20px;
+    }
+
+#form {
+    display: flex;
+    flex-direction: column;
+}
+
+    #form input, #form button {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        outline: none;
+        transition: border-color 0.3s;
+        background-color: #ffffff;
+    }
+
+        #form input:focus {
+            border-color: #4caf50;
+        }
+
+    #form button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        #form button:hover {
+            background-color: #45a049;
+        }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+    .close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+    }
